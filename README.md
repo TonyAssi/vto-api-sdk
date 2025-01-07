@@ -6,7 +6,7 @@ Virtual Try-On API with 3 line of Python code.
 Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/tonyassi/Virtual-Try-On-Pro)
 
 ## Download
-**(Option 1)** Download the Github repo .zip file
+**(Option 1)** Download the [.zip file](https://github.com/TonyAssi/vto-api-sdk/archive/refs/heads/main.zip)
 
 **(Option 2)** Use this in the command line
 ```
@@ -40,8 +40,19 @@ vto = VirtualTryOnAPI(api_key="YOUR_API_KEY")
 
 ### Synchronous Generation
 For the synchronous generation you'll need to wait for it to finish (~20 seconds)
-
 ```python
 result = vto.generate(model_image_path="img/kim.jpg", garment_image_path="img/red.jpg", category="one-pieces")
+print(result)
+```
+
+### Aynchronous Generation
+For the aynchronous generation you first start the generation. This function will return the generation_id.
+```python
+generation_id = vto.run_generation(model_image_path="img/kim.jpg", garment_image_path="img/black.jpg", category="one-pieces")
+print(generation_id)
+```
+Then you need to check the status of the generation with the generation_id.
+```python
+result = vto.get_status(generation_id)
 print(result)
 ```
