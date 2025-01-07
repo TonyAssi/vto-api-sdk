@@ -52,6 +52,9 @@ print(result)
 
 ### Aynchronous Generation
 In aynchronous generation you first start the generation and then it will return the generation_id.
+- **model_image_path** local image path of the model or person
+- **garment_image_path** local image path of the garment
+- **category** 'one-pieces' | 'tops' | 'bottoms'
 ```python
 generation_id = vto.run_generation(model_image_path="img/kim.jpg", 
                                    garment_image_path="img/black.jpg",
@@ -59,6 +62,7 @@ generation_id = vto.run_generation(model_image_path="img/kim.jpg",
 print(generation_id)
 ```
 Then you need to check the status of the generation with the generation_id.
+- **generation_id** generation_id from the run_generation() function
 ```python
 result = vto.get_status(generation_id)
 print(result)
