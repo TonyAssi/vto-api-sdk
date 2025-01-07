@@ -23,8 +23,12 @@ pip install -r requirements.txt
 from vto import VirtualTryOnAPI
 
 vto = VirtualTryOnAPI(api_key="YOUR API KEY")
-
 result = vto.generate(model_image_path="img/kim.jpg", garment_image_path="img/red.jpg", category="one-pieces")
+print(result)
+```
 
-print("Output:", result)
+## Usage
+Import
+```python
+from vto import VirtualTryOnAPI
 ```
