@@ -3,6 +3,8 @@ Virtual Try-On API with 3 line of Python code.
 
 <img width="894" alt="vto" src="https://github.com/user-attachments/assets/49118950-e1e0-4c71-8bd6-f454d8fc476c" />
 
+Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/tonyassi/Virtual-Try-On-Pro)
+
 ## Download
 **(Option 1)** Download the Github repo .zip file
 
