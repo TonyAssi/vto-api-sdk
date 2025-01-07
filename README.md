@@ -32,3 +32,16 @@ Import
 ```python
 from vto import VirtualTryOnAPI
 ```
+
+Initialize the SDK
+```python
+vto = VirtualTryOnAPI(api_key="YOUR_API_KEY")
+```
+
+### Synchronous Generation
+For the synchronous generation you'll need to wait for it to finish (~20 seconds)
+
+```python
+result = vto.generate(model_image_path="img/kim.jpg", garment_image_path="img/red.jpg", category="one-pieces")
+print(result)
+```
