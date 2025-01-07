@@ -40,15 +40,22 @@ vto = VirtualTryOnAPI(api_key="YOUR_API_KEY")
 
 ### Synchronous Generation
 The synchronous generation will return the final image to you but you'll need to wait for it to finish (~20 seconds) before the code moves on.
+- **model_image_path** local image path of the model or person
+- **garment_image_path** local image path of the garment
+- **category** 'one-pieces' | 'tops' | 'bottoms'
 ```python
-result = vto.generate(model_image_path="img/kim.jpg", garment_image_path="img/red.jpg", category="one-pieces")
+result = vto.generate(model_image_path="img/kim.jpg",
+                      garment_image_path="img/red.jpg",
+                      category="one-pieces")
 print(result)
 ```
 
 ### Aynchronous Generation
 In aynchronous generation you first start the generation and then it will return the generation_id.
 ```python
-generation_id = vto.run_generation(model_image_path="img/kim.jpg", garment_image_path="img/black.jpg", category="one-pieces")
+generation_id = vto.run_generation(model_image_path="img/kim.jpg", 
+                                   garment_image_path="img/black.jpg",
+                                   category="one-pieces")
 print(generation_id)
 ```
 Then you need to check the status of the generation with the generation_id.
