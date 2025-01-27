@@ -68,3 +68,11 @@ result = vto.get_status(generation_id)
 print(result)
 ```
 The response will be "processing" while it's working. When it's done it'll say "completed" and provide the final image.
+
+### Get Credits
+Return the number of remaining credits.
+
+```python
+num_credits = vto.get_credits()
+print(num_credits)
+```
