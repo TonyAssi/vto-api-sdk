@@ -74,3 +74,17 @@ class VirtualTryOnAPI:
                 raise Exception(f"Error: {response.status_code}, {response.text}")
 
             time.sleep(2)  # Wait 2 seconds before polling again
+
+    def get_credits(self):
+        """Retrieve the remaining credits."""
+        response = requests.get(
+            f"{self.base_url}/get_credits/{self.api_key}"
+        )
+
+        if response.status_code == 200:
+            credits_data = response.json()
+            return int(credits_data.get("credits", 0))  # Return credits as an integer
+        else:
+            raise Exception(f"Error: {response.status_code}, {response.text}")
+
+
